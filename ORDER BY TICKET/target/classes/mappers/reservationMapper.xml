@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.order.mapper.reservationMapper">
+
+
+	<!-- 예매선택 메뉴 -->
+	<select id="reservationMenu" resultType="com.order.domain.ReservationChoiceVO">
+		SELECT l.location, h.hall_name, s.s_date,s.s_startTime
+			FROM location l, hall h, schedule s	
+				WHERE l.location_no=h.location_no=s.location_no;
+	</select>
+
+
+
+
+	<!-- 예매 내역  -->
+	<select id="reservationlist" parameterType="String" resultType="com.order.domain.ReservationVO">
+		select reservation_no, reservation_nowdate, member_id, s_date, location_no, movie_name
+			from reservation
+				where member_id=#{member_id}
+	</select>
+
+	
+</mapper>
