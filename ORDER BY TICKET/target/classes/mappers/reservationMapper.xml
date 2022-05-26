@@ -5,14 +5,17 @@
 <mapper namespace="com.order.mapper.reservationMapper">
 
 
-	<!-- 예매선택 메뉴 -->
-	<select id="reservationMenu" resultType="com.order.domain.ReservationChoiceVO">
-		SELECT l.location, h.hall_name, s.s_date,s.s_startTime
-			FROM location l, hall h, schedule s	
-				WHERE l.location_no=h.location_no=s.location_no;
+	<!-- =========== 예매선택 메뉴 ========= -->
+	<select id="locationChoice" resultType="com.order.domain.LocationVO">
+		select location_no, location from location
 	</select>
-
-
+	<select id="hallChoice" resultType="com.order.domain.HallVO">
+		select hall_name from hall
+	</select>
+	<select id="scheduleChoice" resultType="com.order.domain.ScheduleVO">
+		select s_startTime from schedule
+	</select>
+	
 
 
 	<!-- 예매 내역  -->

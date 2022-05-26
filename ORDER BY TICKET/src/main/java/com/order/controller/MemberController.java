@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.order.domain.MemberVO;
 
 
 @Controller
@@ -21,6 +24,14 @@ public class MemberController {
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public void getSignup() throws Exception{
 		logger.info("------------회원가입 페이지 진입----------");
+		
+	}
+	//--------------------------------------회원가입 _POST-------------------------------------
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	public String postSignup(MemberVO vo) throws Exception{
+		logger.info("------------회원가입_POST_ 진입----------");
+		logger.info("vo : {}",vo);
+		return "redirect:/";
 		
 	}
 

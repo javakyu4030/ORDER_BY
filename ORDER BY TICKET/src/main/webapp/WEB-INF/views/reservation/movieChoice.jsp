@@ -13,6 +13,7 @@
 	width:100%;
 	height:800px;
 }
+
 #screen1{
 	width:20%;
 	height:600px;
@@ -29,6 +30,18 @@
 	text-align:center;
 }
 
+#location{
+	margin:5%;
+}
+
+#hall{
+	margin:5%;
+}
+
+#runningTime{
+	margin:5%;
+}
+
 #footer{
 	margin:5%;
 	text-align:center;
@@ -36,6 +49,13 @@
 }
 
 </style>	
+<script>
+
+
+
+</script>
+
+
 </head>
 	
 <body>
@@ -72,17 +92,23 @@
 		<div id="screen2">
 			<div id="body" style="height:600px; border:3px dashed maroon">바디부분-티켓예매
 				<div id="menu">
-						<div id="menuLocation" style="border:1px solid gold; float:left; width:20%; height:500px;">지점
-							<c:forEach items="${menuList}" var="menuList">
-									<div>${menuList.location}</div>
+						<div id="menuLocation" style="border:1px solid gold; float:left; width:20%; height:500px;">
+							<div id="location">지점</div>
+							<c:forEach items="${locationChoice}" var="locationChoice">
+								<div>${locationChoice.location}</div>
 							</c:forEach>					
 						</div>				
-						<div id="menuDate" style="border:1px solid red; float:left; width:20%; height:500px;">상영관
-							<c:forEach items="${menuList}" var="menuList">
-									<div>${menuList.hall_name}</div>
+						<div id="menuDate" style="border:1px solid red; float:left; width:20%; height:500px;">
+							<div id="hall">상영관</div>
+							<c:forEach items="${hallChoice}" var="hallChoice">
+								<div style="display:none";>${hallChoice.hall_name}</div>
 							</c:forEach>
 						</div>				
-						<div id="menuTime" style="border:1px solid blue; float:left; width:20%; height:500px;">시간
+						<div id="menuTime" style="border:1px solid blue; float:left; width:20%; height:500px;">
+							<div id="runningTime">시간</div>
+							<c:forEach items="${ScheduleChoice}" var="ScheduleChoice">
+								<div>${ScheduleChoice.s_startTime}</div>
+							</c:forEach>
 						</div>
 				</div>
 			</div>

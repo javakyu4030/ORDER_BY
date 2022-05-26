@@ -1,6 +1,5 @@
 package com.order.controller;
 
-import java.io.OutputStream;
 import java.util.List;
 
 import javax.mail.internet.MimeMessage;
@@ -17,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.order.domain.ReservationChoiceVO;
+import com.order.domain.HallVO;
+import com.order.domain.LocationVO;
 import com.order.domain.ReservationVO;
+import com.order.domain.ScheduleVO;
 import com.order.service.ReservationService;
 
 
@@ -81,11 +82,23 @@ public class ReservationController {
 	//----------------------------예약 페이지_GET------------------------
 	@RequestMapping(value = "/movieChoice", method = RequestMethod.GET)
 	public void getReservation(Model model)throws Exception {
-		logger.info("---------예약페이지 이동------");
+		logger.info("---------예약 페이지_GET 이동------");
 		
-		List<ReservationChoiceVO> menuList = reservationService.menuList();
-		logger.info("reservationService.meuList() : {}",menuList );
-		model.addAttribute("menuList",menuList);
+		//지역 선택
+		logger.info("---------예약페이지_지역선택------");
+		List<LocationVO> location = reservationService.locationChoice();
+		logger.info("reservationService.locationChoice() : {}",location );
+		model.addAttribute("locationChoice",location);
+		//상영관 선택
+		logger.info("---------예약페이지_상영관선택------");
+		List<HallVO> hall = reservationService.hallChoice();
+		logger.info("reservationService.hallChoice() : {}",hall );
+		model.addAttribute("hallChoice",hall);
+		//시간 선택
+		logger.info("---------예약페이지_상영관선택------");
+		List<ScheduleVO> Schedule = reservationService.ScheduleChoice();
+		logger.info("reservationService.ScheduleChoice() : {}",Schedule );
+		model.addAttribute("ScheduleChoice",Schedule);
 		
 	}
 	
