@@ -25,5 +25,10 @@ public class MemberDAOImpl implements MemberDAO {
 	   public int idCheck(MemberVO vo) throws Exception {
 	      return sql.selectOne(NAMESPACE + ".idCheck", vo);
 	   }
+	   
+	   //로그인 ID, PW 체크
+		 public int loginCheck(MemberVO vo) throws Exception{
+			return sql.selectOne(NAMESPACE+".loginCheck",vo);
+		 }
 
 }

@@ -14,5 +14,17 @@
 		<select id="idCheck" resultType="int">
 		    select count(*) from members where member_id = #{member_id}
 		</select>
+		
+		<!--  로그인 매퍼 -->
+				<select id="login" resultType="String">
+		    select * from members where member_id = #{member_id}
+		</select>
+		
+	<!--  로그인 ID,비밀번호 체크 -->
+			<select id="loginCheck" resultType="int">
+		    select count(*)  from members 
+		    where member_id = #{member_id} 
+		    			and member_pw =  #{member_pw}
+		</select>
 	
 </mapper>

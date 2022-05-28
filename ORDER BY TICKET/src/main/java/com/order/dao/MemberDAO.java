@@ -10,4 +10,6 @@ public interface MemberDAO {
 	//회원아이디 호출
 	 public int idCheck(MemberVO vo) throws Exception;
 	
+		//로그인 아이디,비밀번호 체크
+	 public int loginCheck(MemberVO vo) throws Exception;
 }

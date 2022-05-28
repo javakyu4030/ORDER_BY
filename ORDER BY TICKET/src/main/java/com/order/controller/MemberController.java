@@ -1,5 +1,7 @@
 package com.order.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,15 +72,32 @@ public class MemberController {
 	      logger.info("result : {}",result);
 	      return result;
 	   }
+	   
+	   //로그인 체크 test
+	   @ResponseBody
+	   @RequestMapping(value = "/loginCheck", method = RequestMethod.POST)
+	   public int loginCheck(MemberVO vo, HttpSession session) throws Exception {
+
+		   logger.info("로그인 체크 진입");
+	      int result = service.loginCheck(vo);
+	      if(result == 1) {
+	      session.setAttribute("member_id", vo.getMember_id());
+	      }
+	      logger.info("loginCheck result : {}",result);
+	      logger.info("vo : {}",vo);
+	      return result;
+	   }
 
 	
 	
 	//--------------------------------------회원가입 페이지-------------------------------------
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public void getLogin() throws Exception{
-		logger.info("------------회원가입 페이지 진입----------");
-		
-	}
+	
+	 @RequestMapping(value = "/login", method = RequestMethod.GET)
+	 public void  getLogin() throws Exception{ 
+		 logger.info("------------로그인 페이지 진입----------");
+		 
+	  }
+	 
 	
 	
 }
