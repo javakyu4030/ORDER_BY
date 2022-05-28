@@ -14,8 +14,8 @@ public class MemberVO {
 	private String member_id;
 	private String member_pw;
 	private String member_name;
-	private String member_email;
-	private String member_address;
+	private String member_email;//aaaaa@naver.com
+	//private String member_address;
 	private String member_tel;
 	
 	//-----------------------------------getter setter------------------------------
@@ -43,12 +43,14 @@ public class MemberVO {
 	public void setMember_email(String member_email) {
 		this.member_email = member_email;
 	}
+	/*
 	public String getMember_address() {
 		return member_address;
 	}
 	public void setMember_address(String member_address) {
 		this.member_address = member_address;
 	}
+	*/
 	public String getMember_tel() {
 		return member_tel;
 	}
@@ -67,7 +69,7 @@ public class MemberVO {
 		this.member_pw = member_pw;
 		this.member_name = member_name;
 		this.member_email = member_email;
-		this.member_address = member_address;
+		//this.member_address = member_address;
 		this.member_tel = member_tel;
 	}
 	
@@ -75,7 +77,7 @@ public class MemberVO {
 	@Override
 	public String toString() {
 		return "MemberVO [member_id=" + member_id + ", member_pw=" + member_pw + ", member_name=" + member_name
-				+ ", member_email=" + member_email + ", member_address=" + member_address + ", member_tel=" + member_tel
+				+ ", member_email=" + member_email + ", member_tel=" + member_tel
 				+ "]";
 	}
 	

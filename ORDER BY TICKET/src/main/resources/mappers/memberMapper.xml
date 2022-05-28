@@ -4,6 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.order.mapper.memberMapper">
 
-
+	<!-- 회원 정보 저장 -->
+	<insert id="member_insert" parameterType="com.order.domain.MemberVO">
+		insert into members(member_id, member_pw, member_name, member_email, member_tel)
+			values(#{member_id}, #{member_pw}, #{member_name}, #{member_email}, #{member_tel})
+	</insert>
+	
+	<!-- 회원아이디 호출 -->
+		<select id="idCheck" resultType="int">
+		    select count(*) from members where member_id = #{member_id}
+		</select>
 	
 </mapper>

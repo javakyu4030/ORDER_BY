@@ -1,0 +1,6 @@
+onchange -> HTML 요소에 변화가 일어났을때
+onclick -> 사용자가 HTML요소를 클릭했을때
+onmouseover -> 사용자가 HTML요소에 마우스를 올렸을때
+onmouseout -> 사용자가 HTML요소에서 마우스를 내보냈을때
+onkeydown -> 사용자가 키보드를 눌렀을때
+onload -> 브라우저가 웹페이지의 로딩을 끝마쳤을때
