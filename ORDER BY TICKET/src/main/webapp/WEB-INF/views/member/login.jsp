@@ -5,27 +5,7 @@
 
 <head>
 	<title>로그인 페이지</title>
-	
-<style type="text/css">
-#bodyscreen{
-	text-align:center;
-	align-items:center;
-	width:100%;
-	height:800px;
-}
-
-#body{
-	font-size:60px;
-	text-align:center;
-	vertical-align:center;
-}
-#footer{
-	margin:10%;
-	text-align:center;
-	vertical-align:center;
-}
-
-</style>	
+	<link rel="stylesheet" href="/resources/css/login.css">
 </head>
 	
 <body>
@@ -51,8 +31,23 @@
 		</span>
 	</div>
 	<!-- --------------------------------body--------------------------------------- -->
-	<div id="body" style="width:100%; height:600px; border:3px dashed maroon">바디부분 로그인</div>
-
+	<div id="body" style="width:100%; height:600px; border:3px dashed maroon">바디부분 로그인
+		<form name="registerform" id="registerform" style="border:3px dashed maroon" method="post">
+			<div id="member_input">
+				<div>
+					<label for="userid">아이디</label>
+					<input type="text" id="userid" name="member_id" class="userid" placeholder="아이디를 입력하세요" maxlength="20" onchange="idCheck()">
+				</div>
+				<div>
+					<label for="userpw">비밀번호</label>
+					<input type="text" id="userpw" name="member_pw" class="userpw" placeholder="비밀번호를 입력하세요" maxlength="20">
+				</div>
+			</div>
+			<div id="button">
+				<input type="button" value="가입" onclick="register()">
+			</div>
+		</form>
+	</div>
 	<!-- --------------------------------footer--------------------------------------- -->
 	<div id="footer">
 		<span style="border:3px solid red; text-align:center">BOTTOM SECTOR</span>

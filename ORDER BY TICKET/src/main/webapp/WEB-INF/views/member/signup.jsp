@@ -5,7 +5,7 @@
 
 <head>
 	<title>회원가입 페이지</title>
- <link rel="stylesheet" href="/resources/css/signup.css">
+ 	<link rel="stylesheet" href="/resources/css/signup.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
@@ -97,44 +97,44 @@
 	<!-- --------------------------------body--------------------------------------- -->
 	<div id="body" style="width:100%; height:800px; border:3px dashed maroon">바디부분 회원가입
 		<div>
-		<div><p id="checkID" style="color:red;text-align:center;"></p></div>
-			<form name="registerform" id="registerform" method="post">
-				<div>
-					<label for="userid">아이디</label>
-					<input type="text" id="userid" name="member_id" class="userid" placeholder="아이디를 입력하세요" maxlength="20" onchange="idCheck()">
-				</div>
-				
-				<div>
-					<label for="username">이름</label>
-					<input type="text" id="username" name="member_name" class="username" placeholder="이름을 입력하세요" maxlength="20">
-				</div>
-				<div>
-					<label for="userpw">비밀번호</label>
-					<input type="text" id="userpw" name="member_pw" class="userpw" placeholder="비밀번호를 입력하세요" maxlength="20">
-				</div>
-				<div>
-					<label for="userpwConfirm">비밀번호 확인</label>
-					<input type="text" id="userpwConfirm"  class="userpw" placeholder="비밀번호를 다시한번 입력하세요" maxlength="20">
-				</div>
-				<div>
-					<input id="emailid" name="emailId" type="text">@<input id="emailDomain" name="emailDomain" type="text">
-					<select name="select_email" onChange="selectEmail(this)">
-						<option value="" selected> 선택하세요</option>
-						<option value="naver.com" >naver.com</option>
-						<option value="gmail.com" >gmail.com</option>
-						<option value="hanmail.com" >hanmail.com</option>
-						<option value="1" >직접입력</option>
-					</select>
-				</div>
-				<div>
-					<label for="usertel">연락처</label>
-						<input id="tel_1" type="tel" name='phone1' value="010" placeholder="010" /> -
-						<input id="tel_2" type="tel" name='phone2' /> -
-						<input id="tel_3" type="tel" name='phone3' />
-				</div>
-				
-			<p><input type="button" value="가입" onclick="register()">
-			</form>		
+			<div><p id="checkID" style="color:red;text-align:center;"></p></div>
+				<form name="registerform" id="registerform" method="post">
+					<div>
+						<label for="userid">아이디</label>
+						<input type="text" id="userid" name="member_id" class="userid" placeholder="아이디를 입력하세요" maxlength="20" onchange="idCheck()">
+					</div>
+					
+					<div>
+						<label for="username">이름</label>
+						<input type="text" id="username" name="member_name" class="username" placeholder="이름을 입력하세요" maxlength="20">
+					</div>
+					<div>
+						<label for="userpw">비밀번호</label>
+						<input type="text" id="userpw" name="member_pw" class="userpw" placeholder="비밀번호를 입력하세요" maxlength="20">
+					</div>
+					<div>
+						<label for="userpwConfirm">비밀번호 확인</label>
+						<input type="text" id="userpwConfirm"  class="userpw" placeholder="비밀번호를 다시한번 입력하세요" maxlength="20">
+					</div>
+					<div>
+						<input id="emailid" name="emailId" type="text">@<input id="emailDomain" name="emailDomain" type="text">
+						<select name="select_email" onChange="selectEmail(this)">
+							<option value="" selected> 선택하세요</option>
+							<option value="naver.com" >naver.com</option>
+							<option value="gmail.com" >gmail.com</option>
+							<option value="hanmail.com" >hanmail.com</option>
+							<option value="1" >직접입력</option>
+						</select>
+					</div>
+					<div>
+						<label for="usertel">연락처</label>
+							<input id="tel_1" type="tel" name='phone1' value="010" placeholder="010" /> -
+							<input id="tel_2" type="tel" name='phone2' /> -
+							<input id="tel_3" type="tel" name='phone3' />
+					</div>
+					
+				<p><input type="button" value="가입" onclick="register()">
+				</form>		
 		</div>
 	</div>
 
