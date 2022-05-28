@@ -59,7 +59,6 @@ public class MemberController {
 		
 	}
 
-	
 	   //---------------------------------아이디 중복 체크-------------------------------------
 	   @ResponseBody
 	   @RequestMapping(value = "/idCheck", method = RequestMethod.POST)
@@ -72,7 +71,6 @@ public class MemberController {
 	   }
 
 	
-	
 	//--------------------------------------회원가입 페이지-------------------------------------
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public void getLogin() throws Exception{
@@ -80,5 +78,6 @@ public class MemberController {
 		
 	}
 	
+	//--------------------------------------로그인-------------------------------------
 	
 }
