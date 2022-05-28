@@ -132,7 +132,6 @@
 						<input id="tel_2" type="tel" name='phone2' /> -
 						<input id="tel_3" type="tel" name='phone3' />
 				</div>
-				
 			<p><input type="button" value="가입" onclick="register()">
 			</form>		
 		</div>
