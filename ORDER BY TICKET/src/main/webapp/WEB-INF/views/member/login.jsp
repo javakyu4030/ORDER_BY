@@ -48,6 +48,26 @@
 
 
 <style type="text/css">
+<<<<<<< HEAD
+#bodyscreen{
+	text-align:center;
+	align-items:center;
+	width:100%;
+	height:800px;
+}
+
+#body{
+	font-size:30px;
+	text-align:center;
+	vertical-align:center;
+}
+#footer{
+	margin:10%;
+	text-align:center;
+	vertical-align:center;
+}
+=======
+>>>>>>> branch 'ORDER_BY' of https://github.com/javakyu4030/ORDER_BY.git
 
 
 </style>	
