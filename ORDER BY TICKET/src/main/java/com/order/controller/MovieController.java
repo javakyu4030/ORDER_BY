@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,8 +22,14 @@ public class MovieController {
 	private static final Logger logger = LoggerFactory.getLogger(MovieController.class);
 	
 	@RequestMapping(value = "/movieInform", method = RequestMethod.GET)
-	public void getMovieInform(HttpSession session) throws Exception{
+	public void getMovieInform(Model model, HttpSession session) throws Exception{
 		logger.info("------------영화 정보 페이지 진입(GET)----------");
+		
+		logger.info("------------영화 정보 페이지 진입(GET)----------");
+		Object movieInfo_member_id = session.getAttribute("member_id");
+		logger.info("movieInfo_member_id:{}",movieInfo_member_id);
+		
+		model.addAttribute("sessionMember_id",movieInfo_member_id);
 		
 	}
 	@RequestMapping(value = "/movieInform", method = RequestMethod.POST)

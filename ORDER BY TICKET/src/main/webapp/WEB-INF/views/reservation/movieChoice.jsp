@@ -3,56 +3,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
-	<title>영화정보 페이지</title>
+	<title>영화예매 페이지</title>
+	<link rel="stylesheet" href="/resources/css/movieChoice.css">
 	
-<style type="text/css">
-#bodyscreen{
-	margin:2%;
-	text-align:center;
-	align-items:center;
-	width:100%;
-	height:800px;
-}
-
-#screen1{
-	width:20%;
-	height:600px;
-	float:right;
-	background-color:darkgrey;
-}
-#screen2{
-	width:80%;
-	height:600px;
-	background-color:lightgrey;
-}
-#menu{
-	margin:2%;
-	text-align:center;
-}
-
-#location{
-	margin:5%;
-}
-
-#hall{
-	margin:5%;
-}
-
-#runningTime{
-	margin:5%;
-}
-
-#footer{
-	margin:5%;
-	text-align:center;
-	vertical-align:center;
-}
-
-</style>	
+	
 <script>
-
-
-
 </script>
 
 
@@ -65,15 +20,20 @@
 		<h2 style="background-color:lightgrey; color:white; text-align:center" >HEADER SECTOR</h2>
 	</div>
 	<hr>
+	<div id="session_id">
+		<a href="">${sessionMember_id}</a>님! 환영합니다!
+	</div>
+	
 	<div id="nav">
 		<h2 style="background-color:darkgrey; color:white; text-align:center">NAV SECTOR</h2>
 		<h2 style="background-color:darkgrey; color:white; text-align:center">
+			<a href="/">홈</a>
 			<a href="/member/login">로그인</a>
 			<a href="/member/signup">회원가입</a>
-			<a href="/movie/movieInform">영화 정보</a>
 			<a href="/reservation/mailSend">메일 발송</a>
+			<a href="/movie/movieInform">영화 정보</a>
 			<a href="/reservation/movieChoice">티켓예매</a>
-			<a href="/reservation/reservationConfirm">예매내역 확인</a>
+			<a href="/reservation/reservationConfirm">예매내역</a>
 		</h2>
 	</div>
 	

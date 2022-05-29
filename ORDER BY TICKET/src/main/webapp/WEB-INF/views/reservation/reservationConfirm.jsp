@@ -4,42 +4,8 @@
 <html>
 <head>
 	<title>예매내역 확인 페이지</title>
-	
-<style type="text/css">
-#bodyscreen{
-	margin:2%;
-	text-align:center;
-	align-items:center;
-	width:100%;
-	height:800px;
-}
-#screen1{
-	width:20%;
-	height:600px;
-	float:right;
-	background-color:darkgrey;
-}
-#screen2{
-	width:80%;
-	height:600px;
-	background-color:lightgrey;
-}
+	<link rel="stylesheet" href="/resources/css/reservationConfirm.css">
 
-.reservationTable{
-	margin:auto;
-	border-spacing: 50px;
-	text-align:center;
-	align-items:center;
-	
-}
-
-#footer{
-	margin:5%;
-	text-align:center;
-	vertical-align:center;
-}
-
-</style>	
 </head>
 	
 <body>
@@ -49,15 +15,20 @@
 		<h2 style="background-color:lightgrey; color:white; text-align:center" >HEADER SECTOR</h2>
 	</div>
 	<hr>
+	<div id="session_id">
+		<a href="">${sessionMember_id}</a>님! 환영합니다!
+	</div>
+	
 	<div id="nav">
 		<h2 style="background-color:darkgrey; color:white; text-align:center">NAV SECTOR</h2>
 		<h2 style="background-color:darkgrey; color:white; text-align:center">
 			<a href="/">홈</a>
 			<a href="/member/login">로그인</a>
 			<a href="/member/signup">회원가입</a>
-			<a href="/movie/movieInform">영화 정보</a>
 			<a href="/reservation/mailSend">메일 발송</a>
+			<a href="/movie/movieInform">영화 정보</a>
 			<a href="/reservation/movieChoice">티켓예매</a>
+			<a href="/reservation/reservationConfirm">예매내역</a>
 		</h2>
 	</div>
 	

@@ -1,0 +1,44 @@
+#bodyscreen{
+	margin:2%;
+	text-align:center;
+	align-items:center;
+	width:100%;
+	height:800px;
+}
+
+#session_id{
+	text-align:right;
+	font-weight:bold;
+	font-size:15px;
+}
+
+a{
+	font-size:20px;
+	text-decoration-line: none;
+}
+
+#screen1{
+	width:20%;
+	height:600px;
+	float:right;
+	background-color:darkgrey;
+}
+#screen2{
+	width:80%;
+	height:600px;
+	background-color:lightgrey;
+}
+
+.reservationTable{
+	margin:auto;
+	border-spacing: 50px;
+	text-align:center;
+	align-items:center;
+	
+}
+
+#footer{
+	margin:5%;
+	text-align:center;
+	vertical-align:center;
+}

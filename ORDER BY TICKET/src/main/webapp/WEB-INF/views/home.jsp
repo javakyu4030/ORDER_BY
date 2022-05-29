@@ -40,6 +40,7 @@
 	<hr>
 	<div id="nav">
 		<h2 style="background-color:darkgrey; color:white; text-align:center">
+			<a href="/">홈</a>
 			<a href="/member/login">로그인</a>
 			<a href="/member/signup">회원가입</a>
 			<a href="/reservation/mailSend">메일 발송</a>
