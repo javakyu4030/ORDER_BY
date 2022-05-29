@@ -73,7 +73,7 @@ public class MemberController {
 	      return result;
 	   }
 	   
-	   //로그인 체크 test
+	   //로그인 체크 , Session 
 	   @ResponseBody
 	   @RequestMapping(value = "/loginCheck", method = RequestMethod.POST)
 	   public int loginCheck(MemberVO vo, HttpSession session) throws Exception {

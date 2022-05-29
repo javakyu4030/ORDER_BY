@@ -35,11 +35,16 @@
 </head>
 	
 <body>
-	<!-- --------------------------------세션 작업--------------------------------------- -->
-<%
-
-%>
-
+	<!-- --------------------------------세션 부분 테스트--------------------------------------- -->
+<!-- <script type="text/javascript">
+	var sessionCheck = "${sessionCheck}"";
+	var message = "${msg}";
+	var url = "${url}";
+	if(sessionCheck==""){
+			alert(message);
+			document.location.href = url;
+	}
+</script>  -->
 
 	<!-- --------------------------------header--------------------------------------- -->
 	<div id="header" >

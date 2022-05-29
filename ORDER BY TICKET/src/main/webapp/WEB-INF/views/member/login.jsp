@@ -54,7 +54,7 @@
 }
 
 #body{
-	font-size:60px;
+	font-size:30px;
 	text-align:center;
 	vertical-align:center;
 }
@@ -100,7 +100,7 @@
 <div id="body" style="width:100%; height:800px; border:3px dashed maroon">바디부분 로그인
 		<div>
 		<div><p id="loginCheck" style="color:red;text-align:center;"></p></div>
-			<form name="loginCheckform" id="loginCheckform" method="get">
+			<form name="loginCheckform" id="loginCheckform" method="post">
 				<div>
 					<label for="userid">아이디</label>
 					<input type="text" id="userid" name="member_id" class="userid" placeholder="아이디를 입력하세요" maxlength="20" >
