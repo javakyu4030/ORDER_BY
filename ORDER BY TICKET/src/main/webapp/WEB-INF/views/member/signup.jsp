@@ -5,7 +5,7 @@
 
 <head>
 	<title>회원가입 페이지</title>
- <link rel="stylesheet" href="/resources/css/signup.css">
+	<link rel="stylesheet" href="/resources/css/signup.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
@@ -88,6 +88,8 @@
 			<h2 style="background-color:darkgrey; color:white; text-align:center">
 				<a href="/">홈</a>
 				<a href="/member/login">로그인</a>
+				<a href="/member/signup">회원가입</a>
+				<a href="/reservation/mailSend">메일 발송</a>
 				<a href="/movie/movieInform">영화 정보</a>
 				<a href="/reservation/movieChoice">티켓예매</a>
 				<a href="/reservation/reservationConfirm">예매내역</a>

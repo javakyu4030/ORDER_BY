@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -81,7 +82,7 @@ public class ReservationController {
 	
 	//----------------------------예약 페이지_GET------------------------
 	@RequestMapping(value = "/movieChoice", method = RequestMethod.GET)
-	public void getReservation(Model model)throws Exception {
+	public void getReservation(Model model, HttpSession session)throws Exception {
 		logger.info("---------예약 페이지_GET 이동------");
 		
 		//지역 선택
@@ -100,17 +101,30 @@ public class ReservationController {
 		logger.info("reservationService.ScheduleChoice() : {}",Schedule );
 		model.addAttribute("ScheduleChoice",Schedule);
 		
+		//세션 아이디정보
+		Object movieChoice_member_id = session.getAttribute("member_id");
+		logger.info("sessionMember_id:{}",movieChoice_member_id);
+		model.addAttribute("sessionMember_id",movieChoice_member_id);
+		
 	}
 	
 
 	//----------------------------예매내역 확인 페이지_GET------------------------
 	@RequestMapping(value = "/reservationConfirm", method = RequestMethod.GET)
-	public void getReservationConfirm(@RequestParam(name="member_id",required=false)String member_id , Model model)throws Exception {
+	public void getReservationConfirm(@RequestParam(name="member_id",	
+													required=false)String member_id ,
+													Model model,
+													HttpSession session)throws Exception {
+		
 		logger.info("--------예매내역리스트 페이지------");
 		logger.info("member_id : {}",member_id);
 		
 			List<ReservationVO> list = reservationService.list(member_id);
 			model.addAttribute("reservationList",list);
+			
+			//세션 아이디정보
+			Object resrvation_member_id = session.getAttribute("member_id");
+			logger.info("sessionMember_id:{}",resrvation_member_id);
+			model.addAttribute("sessionMember_id",resrvation_member_id);
 	}
-	
-}
+}//ReservationController class end
