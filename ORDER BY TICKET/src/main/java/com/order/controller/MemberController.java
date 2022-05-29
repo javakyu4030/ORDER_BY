@@ -79,8 +79,10 @@ public class MemberController {
 	   public int loginCheck(MemberVO vo, HttpSession session) throws Exception {
 
 		   logger.info("로그인 체크 진입");
+		   
+		   
 	      int result = service.loginCheck(vo);
-	      if(result == 1) {
+	      if(result == 1) {  // loginCheck Mapper 쿼리문값이 1일 경우 로그인
 	      session.setAttribute("member_id", vo.getMember_id());
 	      }
 	      logger.info("loginCheck result : {}",result);

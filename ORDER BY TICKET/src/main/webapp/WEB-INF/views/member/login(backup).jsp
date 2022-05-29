@@ -4,7 +4,7 @@
 <html>
 
 <head>
-
+	<title>로그인 페이지</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 
@@ -14,17 +14,19 @@
 	 //로그인 버튼클릭 시 영화정보페이지로 이동.
 		 console.log("sssss");
 			$.ajax({
-				url : "/member/idCheck", //전송할 url
+				url : "/member/loginCheck", //전송할 url
 				type : "post", //전송할 메서드 타입
 				dataType : "json", //받을 데이터 타입 안정하면 기본 xml형식
-				data : {"member_id" : $("#userid").val()}, ////전송할 데이터
+				data : {"member_id" : $("#userid").val(), "member_pw" : $("#userpw").val()  }, ////전송할 데이터
+				//data : {"member_pw" : $("#userpw").val()}, ////전송할 데이터
 				success : function(a){
 					if(a == 1){ //로그인 성공
 						$("#userid").val("").focus();
-						$("#checkID").html("로그인 성공");
+						$("#userpw").val("").focus();
+						$("#loginCheck").html("로그인 성공");
 						$("#loginCheckform").attr("action", "/movie/movieInform").submit(); 
 					}else if(a == 0){
-						$("#checkID").html("<h4>아이디,비밀번호가 맞지 않습니다.</h4>");
+						$("#loginCheck").html("<h4>아이디,비밀번호가 맞지 않습니다.</h4>");
 					}
 				}
 			})
@@ -97,7 +99,7 @@
 	<!-- --------------------------------body--------------------------------------- -->
 <div id="body" style="width:100%; height:800px; border:3px dashed maroon">바디부분 로그인
 		<div>
-		<div><p id="checkID" style="color:red;text-align:center;"></p></div>
+		<div><p id="loginCheck" style="color:red;text-align:center;"></p></div>
 			<form name="loginCheckform" id="loginCheckform" method="post">
 				<div>
 					<label for="userid">아이디</label>
